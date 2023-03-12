@@ -1,59 +1,28 @@
-//switch case
-// if b==undefined => return english;
-
-// example:
-function greeting(name, language) {
-  switch (language){
-    case 'czech':
-      console.log('Vitejte, '+ name);
-      break;
-    case 'danish':
-      console.log('Velkomst, '+ name);
-      break;
-    case 'dutch':
-      console.log('Welkom, '+ name);
-      break;
-    case 'estonian':
-      console.log('Tere tulemast, '+ name);
-      break;
-    case 'finnish':
-      console.log('Tervetuloa, '+ name);
-      break;
-    case 'flemish':
-      console.log('Welgekomen, '+name);
-      break;
-    case 'french':
-      console.log('Bienvenue, '+name);
-      break;
-    case 'german':
-      console.log('Willkommen, '+name);
-      break;
-    case  'Failte':
-      console.log('Failte, '+name);
-      break;
-    case 'italian':
-      console.log('Benvenuto, '+name);
-      break;
-    case 'latvian':
-      console.log('Gaidits, '+name);
-      break;
-    case 'lithuanian':
-      console.log('Laukiamas, '+name);
-      break;
-    case 'polish':
-      console.log('Witamy, '+name);
-      break;
-    case 'spanish':
-      console.log('Bienvenido, '+name);
-      break;
-    case 'swedish':
-      console.log('Valkommen, '+name);
-      break;
-    case 'welsh':
-      console.log('Croeso, '+name);
-      break;         
-    default:
-    console.log('Welcome, '+name);        
-  }
-}
-console.log(greeting('maria','french'));
+// initialise un objet avec langage : salutation
+const langage ={
+  czech :'Vitejte', 
+  danish : 'Velkomst',
+  dutch : 'Welkom',
+  estonian : 'Tere tulemast', 
+  finnish : 'Tervetuloa',
+  flemish : 'Welgekomen',
+  french : 'Bienvenue',
+  german : 'Willkommen',
+  irish : 'Failte',
+  italian : 'Benvenuto',
+  latvian : 'Gaidits',
+  lithuanian : 'Laukiamas',
+  polish : 'Witamy', 
+  spanish : 'Bienvenido', 
+  swedish : 'Valkommen',
+  welsh : 'Croeso', 
+  english : 'Hello',
+};
+  // créer une fonction greeting qui prend nom + langage
+  // greeting crée une boucle qui selon langage cherche dans objet la valeur correspondante
+  // retourne nom + valeur
+  function greeting(name,id='english'){ // si que nom : retourne : nom + english[value]
+      return langage[id] + ',' + name
+  };
+  console.log(greeting('Maria', 'french'));
+  //console.log(greeting('Maria'));
